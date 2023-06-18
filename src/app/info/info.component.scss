@@ -38,8 +38,12 @@
             box-shadow: 12px 0 rgba(217, 200, 241, 1), 24px 0 rgba(226, 214, 243, 1), 36px 0 rgba(236, 230, 245, 1);
 
             @media (max-width: 990px) {
-                width: 280px;
-                height: 280px;
+                width: 230px;
+                height: 230px;
+                box-shadow: 8px 0 rgb(217, 200, 241), 16px 0 rgb(226, 214, 243), 24px 0 rgb(236, 230, 245);
+            }
+            @media (max-width: 320px) {
+                box-shadow: none;
             }
         }
     }
