@@ -1,0 +1,142 @@
+@import "../../assets/styles/variables.scss";
+
+.menuButton {
+    cursor: pointer;
+    position: fixed;
+    height: 35px;
+    width: 35px;
+    padding: 6px;
+    top: 35px;
+    right: 15px;
+    z-index: 20;
+    text-align: center;
+    display: none;
+    
+    @media (max-width: 990px) {
+        display: block;
+    }
+
+    .linesContainer {
+        position: relative;
+
+        .fa {
+            font-size: 25px;
+        }
+    }
+}
+
+.sideMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 105px;
+    height: 100%;
+    gap: 16px;
+    background-color: $mainColor;
+    position: fixed;
+    color: white;
+    transition: $transitionEase;
+    z-index: 10;
+    @media (max-width: 990px) {
+        width: 220px;
+        justify-content: flex-start;
+    
+        nav {
+          margin-top: 12px;
+        }
+    }
+
+    p {
+        text-align: center;
+        padding: 30px 15px;
+        font-size: 3rem;
+        letter-spacing: 1px;
+        font-weight: 300;
+        background-color: #773dc8;
+    }
+
+    nav {
+        padding: 26px;
+
+        a {
+            padding: 13px 17px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 24px;
+            transition-duration: 0.25s;
+            border-radius: 6px;
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+
+            span {
+                font-size: 0.75rem;
+                font-weight: 300;
+                letter-spacing: 2px;
+                transition-duration: 0.2s;
+                position: absolute;
+                left: 55px;
+                top: 18px;
+                transition-delay: 0.1s;
+            }
+
+            &:hover {
+                background-color: #9D69E5;
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+
+    .scrollDown {
+        height: 50px;
+        position: relative;
+        left: 35px;
+
+        .lni-arrow-down {
+            line-height: 1.2;
+            font-size: 2rem;
+        }
+
+        .scrollDownText {
+            font-size: 0.75rem;
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            font-weight: 300;
+        }
+    }
+}
+
+.hoverMenu {
+    width: 220px;
+}
+
+.menuShow {
+    display: block;
+}
+
+.menuHide {
+    display: none;
+}
+
+.sideMenuHide {
+    left: -300px;
+}
+
+.sideMenuShow {
+    left: 0;
+}
+
+@media (min-width: 991px) {
+    .navItemName {
+        display: none;
+    }
+
+    .sideMenu:hover {
+        width: 220px;
+
+        .navItemName {
+            display: block;
+        }
+    }
+}
