@@ -36,6 +36,11 @@
             width: 350px;
             height: 350px;
             box-shadow: 12px 0 rgba(217, 200, 241, 1), 24px 0 rgba(226, 214, 243, 1), 36px 0 rgba(236, 230, 245, 1);
+
+            @media (max-width: 990px) {
+                width: 280px;
+                height: 280px;
+            }
         }
     }
 
