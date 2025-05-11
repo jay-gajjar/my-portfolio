@@ -1,15 +1,17 @@
-$mainColor: #4286f4;
-$darkWhite: #f7f7f7;
+:root {
+  --primary-color: #0C356A;
+  --primary-hover: #0174BE;
+  --background-color: #f7f7f7;
+  --card-bg: #ffffff;
+  --color: #373B44;
+}
+
 $offWhite: #eee;
-$lightBlack: #373B44;
-
 $transitionEase: all 0.3s ease-in;
-$plainFocus: 2px solid $mainColor;
-
 $smallBorder: 1px solid $offWhite;
 
 @mixin focusBorder {
-  border-color: #80bdff;
+  border-color: var(--color);
   outline: 0;
-  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+  box-shadow: 0 0 0 .2rem rgba(32, 32, 32, 0.25);
 }
